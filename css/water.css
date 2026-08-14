@@ -1,0 +1,176 @@
+/* ==========================================================================
+   FitLife — estilos específicos da página de Hidratação
+   ========================================================================== */
+
+.water-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.water-ring-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.water-ring-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 1rem 0 1.5rem;
+}
+
+.water-ring-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ring-track-water {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 14;
+}
+
+.ring-progress-water {
+  fill: none;
+  stroke: var(--color-info);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.5s ease, stroke 0.4s ease;
+}
+
+.ring-progress-water.goal-reached {
+  stroke: var(--color-success);
+}
+
+.water-ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-ring-center .amount {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+}
+
+.water-ring-center .goal {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.water-status {
+  font-weight: 600;
+  color: var(--color-info);
+  min-height: 1.4em;
+}
+
+.water-status.done {
+  color: var(--color-success);
+}
+
+.water-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.water-btn {
+  padding: 0.7rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-weight: 600;
+  color: var(--color-info);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.water-btn:hover {
+  background: #e8f4fb;
+}
+
+.water-btn:active {
+  transform: scale(0.96);
+}
+
+.water-custom {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.water-custom input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.water-reset {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.water-reset:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.water-log h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.water-log ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.water-log li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.9rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.water-log .empty {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 860px) {
+  .water-layout {
+    grid-template-columns: 1fr;
+  }
+}

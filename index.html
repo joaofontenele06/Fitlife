@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife — Seu hub central de saúde</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <div class="brand"><i class="fa-solid fa-heart-pulse"></i> FitLife</div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Início</a>
+        <a href="pages/imc.html">IMC</a>
+        <a href="pages/tmb.html">TMB</a>
+        <a href="pages/water.html">Hidratação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Hub de saúde</span>
+        <h1>Cuide do seu corpo com números que fazem sentido.</h1>
+        <p>Calcule seu IMC, descubra sua Taxa Metabólica Basal e acompanhe sua
+          hidratação diária — tudo em um só lugar, sem cadastro e sem enrolação.</p>
+      </div>
+      <div class="hero-ring" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <circle class="ring-track" cx="100" cy="100" r="80" />
+          <circle class="ring-progress" cx="100" cy="100" r="80"
+                  stroke-dasharray="502"
+                  stroke-dashoffset="140" />
+          <text x="100" y="95" text-anchor="middle" class="ring-label" style="font-size:34px; fill:#145c3e;">72%</text>
+          <text x="100" y="118" text-anchor="middle" style="font-size:13px; fill:#5b6b62;">meta diária</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="tools-grid">
+      <a class="tool-card imc" href="pages/imc.html">
+        <div class="icon"><i class="fa-solid fa-weight-scale"></i></div>
+        <h3>Calculadora de IMC</h3>
+        <p>Descubra seu Índice de Massa Corporal e veja sua classificação com
+          feedback visual imediato.</p>
+        <span class="go">Calcular agora <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a class="tool-card tmb" href="pages/tmb.html">
+        <div class="icon"><i class="fa-solid fa-fire"></i></div>
+        <h3>Taxa Metabólica Basal</h3>
+        <p>Estime quantas calorias seu corpo queima em repouso usando a
+          fórmula de Harris-Benedict.</p>
+        <span class="go">Calcular agora <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a class="tool-card water" href="pages/water.html">
+        <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Controle de Hidratação</h3>
+        <p>Registre a água que você bebe ao longo do dia e acompanhe sua
+          meta em um anel de progresso.</p>
+        <span class="go">Começar <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Feito com <i class="fa-solid fa-heart"></i> para praticar HTML, CSS e JavaScript puros.
+  </footer>
+
+</body>
+</html>
